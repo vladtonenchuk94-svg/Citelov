@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2a0a1e">
+<title>Для Ангеліночки 💓</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg" aria-hidden="true"></div>
+<header id="bar">
+  <div class="progress" role="progressbar" aria-label="Прогрес гри" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="pfill"></i></div>
+  <button id="btnSound" class="icon" type="button" aria-label="Музика" aria-pressed="false">🔇</button>
+  <button id="btnRestart" class="icon" type="button" aria-label="Почати спочатку">↺</button>
+</header>
+<main>
+  <section id="s-intro" class="screen center">
+    <button class="plain orn rise" style="--d:0" data-secret="ornament" data-taps="5" aria-label="Прикраса"><svg viewBox="0 0 24 24" width="84" height="84"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2 0 3.7 1.1 5.4 3 1.7-1.9 3.4-3 5.4-3 3.600 0 5.700 3.700 4.200 7.200C19.500 16.400 12 21 12 21z" fill="url(#g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb3cd"/><stop offset="1" stop-color="#c2386e"/></linearGradient></defs></svg></button>
+    <h1 class="rise" style="--d:.6">Для моєї Ангеліночки 💓</h1>
+    <p class="rise mut" style="--d:1.4" id="introMsg"></p>
+    <button id="start" class="btn rise" style="--d:2.2" type="button"></button>
+    <button id="skip" class="plain mut" type="button">Пропустити анімацію</button>
+  </section>
+
+  <section id="s-l1" class="screen">
+    <p class="eyebrow">Рівень 1</p><h2>З чого все почалося</h2>
+    <div class="glass">
+      <div id="timer" class="timer" aria-live="off"><div><b id="t-y">0</b><span>років</span></div><div><b id="t-d">0</b><span>днів</span></div><div><b id="t-h">0</b><span>годин</span></div><div><b id="t-m">0</b><span>хвилин</span></div></div>
+      <p id="timerStub" class="mut" hidden>Дату знайомства ще не вказано. Додай її в config.js (metDate) — тут з’явиться лічильник.</p>
+    </div>
+    <div class="glass">
+      <div id="slide"></div>
+      <div class="row"><button id="prev" class="btn ghost" type="button" aria-label="Попереднє фото">‹</button><span id="slideNum" class="mut"></span><button id="next" class="btn ghost" type="button" aria-label="Наступне фото">›</button></div>
+    </div>
+    <button class="btn" type="button" data-go="l2" data-complete="l1">Далі</button>
+  </section>
+
+  <section id="s-l2" class="screen">
+    <p class="eyebrow">Рівень 2</p><h2>Наші спогади</h2>
+    <p class="mut">Відкрий усі картки, щоб рухатися далі.</p>
+    <div id="grid" class="grid"></div>
+    <p id="memCount" class="mut"></p>
+    <button id="go2" class="btn" type="button" data-go="l3" data-complete="l2" disabled>Далі</button>
+    <button class="plain secret-heart" data-secret="heart" data-taps="1" aria-label="Загадкове сердечко">♥</button>
+  </section>
+
+  <section id="s-l3" class="screen">
+    <p class="eyebrow">Рівень 3</p><h2>Лист для тебе</h2>
+    <button id="envelope" class="env" type="button" aria-label="Відкрити конверт"><span class="flap"></span><span class="seal">💗</span><span class="hint">Натисни, щоб відкрити</span></button>
+    <article id="paper" class="paper" hidden><h3 id="letterTitle"></h3><div id="letterBody"></div></article>
+    <button id="go3" class="btn" type="button" data-go="l4" data-complete="l3" hidden>Прочитала — продовжити</button>
+  </section>
+
+  <section id="s-l4" class="screen">
+    <p class="eyebrow">Рівень 4</p><h2><button class="plain h2b" data-secret="title4" data-taps="3">Знайди наші сердечка</button></h2>
+    <p class="mut">Торкайся сердечок — деякі ледь помітні. Знайдено: <b id="count">0</b></p>
+    <div id="field" class="field"></div>
+    <div id="win" class="glass" hidden><p>Усі сердечка знайдено! 💖</p><div class="row"><button class="btn" type="button" data-go="final">До фіналу</button></div></div>
+    <button id="replay" class="btn ghost" type="button">Пограти ще раз</button>
+  </section>
+
+  <section id="s-final" class="screen center">
+    <h1>Ангеліночка, ти пройшла нашу маленьку пригоду 💓</h1>
+    <div id="finalText" class="glass"></div>
+    <div id="finalPhoto" class="fphoto"></div>
+    <input id="photoInput" type="file" accept="image/*" hidden>
+    <button id="addPhoto" class="btn ghost" type="button">Додати фотографію</button>
+    <button id="reveal" class="btn" type="button">Відкрити останній сюрприз</button>
+    <div id="hidden" class="glass" hidden><p id="hiddenText"></p></div>
+    <p id="secretCount" class="mut"></p>
+    <button id="again" class="btn ghost" type="button">Пройти ще раз</button>
+  </section>
+</main>
+
+<div id="modal" class="overlay" hidden role="dialog" aria-modal="true" aria-label="Спогад">
+  <div class="sheet glass"><div id="modalBody"></div><button id="modalClose" class="btn" type="button">Закрити</button></div>
+</div>
+<div id="confirm" class="overlay" hidden role="alertdialog" aria-modal="true">
+  <div class="sheet glass"><p id="confirmText"></p><div class="row"><button id="confirmNo" class="btn ghost" type="button">Скасувати</button><button id="confirmYes" class="btn" type="button">Так</button></div></div>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
