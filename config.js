@@ -2,32 +2,32 @@
    Тут змінюються тексти, дата, фото й музика. script.js чіпати не потрібно. */
 window.CONFIG = {
   // Дата знайомства: "РРРР-ММ-ДДTГГ:ХХ:00". Порожньо — сайт покаже заглушку.
-  metDate: "",
+  metDate: "2026-08-28T23:46:00",
   introMessage: "Тут сховано маленьку пригоду. Проходь рівень за рівнем — наприкінці на тебе чекає послання.",
 
   // Рівень 1: фото (шляхи відносно index.html). Немає файлу — буде акуратна заглушка.
   startPhotos: [
-    { src: "assets/images/start1.jpg", caption: "Підпис до першого фото" },
-    { src: "assets/images/start2.jpg", caption: "Підпис до другого фото" }
+    { src: "assets/images/start1.jpg", caption: "Дякую що прийшла до мене..." },
+    { src: "assets/images/start2.jpg", caption: "На той момент я вже любив тебе)" }
   ],
 
   // Рівень 2: спогади (мінімум 6). Заміни демонстраційні підписи своїми.
   memories: [
-    { src: "assets/images/photo1.jpg", title: "Спогад 1", text: "Тут буде опис першого спогаду." },
-    { src: "assets/images/photo2.jpg", title: "Спогад 2", text: "Тут буде опис другого спогаду." },
-    { src: "assets/images/photo3.jpg", title: "Спогад 3", text: "Тут буде опис третього спогаду." },
-    { src: "assets/images/photo4.jpg", title: "Спогад 4", text: "Тут буде опис четвертого спогаду." },
-    { src: "assets/images/photo5.jpg", title: "Спогад 5", text: "Тут буде опис п’ятого спогаду." },
-    { src: "assets/images/photo6.jpg", title: "Спогад 6", text: "Тут буде опис шостого спогаду." }
+    { src: "assets/images/photo1.jpg", title: "Спогад 1", text: "КУ-СЮЧКА." },
+    { src: "assets/images/photo2.jpg", title: "Спогад 2", text: "Цей день запам'ятав я на довго)" },
+    { src: "assets/images/photo3.jpg", title: "Спогад 3", text: "Перша спільна нічка вхвх. Які ми соньки." },
+    { src: "assets/images/photo4.jpg", title: "Спогад 4", text: "Хто чорний кітик :)" },
+    { src: "assets/images/photo5.jpg", title: "Спогад 5", text: "Кров того вартувала." },
+    { src: "assets/images/photo6.jpg", title: "Спогад 6", text: "Майже як рідні вхвхв." }
   ],
 
   // Рівень 3: лист. Кожен рядок — окремий абзац.
   letter: {
     title: "Лист для тебе",
     paragraphs: [
-      "Тут буде твій лист. Заміни ці рядки власними словами.",
-      "Кожен елемент списку — окремий абзац.",
-      "Підпис"
+      "Сьогодні два місяці як ми разом.",
+      "Надіюсь тобі сподобається мій подарунок.",
+      "Люблю тебе моя красуня."
     ]
   },
 
