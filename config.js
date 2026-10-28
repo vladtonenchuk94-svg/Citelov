@@ -7,18 +7,18 @@ window.CONFIG = {
 
   // Рівень 1: фото (шляхи відносно index.html). Немає файлу — буде акуратна заглушка.
   startPhotos: [
-    { src: "assets/images/start1.jpg", caption: "Дякую що прийшла до мене..." },
-    { src: "assets/images/start2.jpg", caption: "На той момент я вже любив тебе)" }
+    { src: "assets/images/start1.JPG", caption: "Дякую що прийшла до мене..." },
+    { src: "assets/images/start2.JPG", caption: "На той момент я вже любив тебе)" }
   ],
 
   // Рівень 2: спогади (мінімум 6). Заміни демонстраційні підписи своїми.
   memories: [
-    { src: "assets/images/photo1.jpg", title: "Спогад 1", text: "КУ-СЮЧКА." },
-    { src: "assets/images/photo2.jpg", title: "Спогад 2", text: "Цей день запам'ятав я на довго)" },
-    { src: "assets/images/photo3.jpg", title: "Спогад 3", text: "Перша спільна нічка вхвх. Які ми соньки." },
-    { src: "assets/images/photo4.jpg", title: "Спогад 4", text: "Хто чорний кітик :)" },
-    { src: "assets/images/photo5.jpg", title: "Спогад 5", text: "Кров того вартувала." },
-    { src: "assets/images/photo6.jpg", title: "Спогад 6", text: "Майже як рідні вхвхв." }
+    { src: "assets/images/photo1.JPG", title: "Спогад 1", text: "КУ-СЮЧКА." },
+    { src: "assets/images/photo2.JPG", title: "Спогад 2", text: "Цей день запам'ятав я на довго)" },
+    { src: "assets/images/photo3.JPG", title: "Спогад 3", text: "Перша спільна нічка вхвх. Які ми соньки." },
+    { src: "assets/images/photo4.JPG", title: "Спогад 4", text: "Хто чорний кітик :)" },
+    { src: "assets/images/photo5.JPG", title: "Спогад 5", text: "Кров того вартувала." },
+    { src: "assets/images/photo6.JPG", title: "Спогад 6", text: "Майже як рідні вхвхв." }
   ],
 
   // Рівень 3: лист. Кожен рядок — окремий абзац.
