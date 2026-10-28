@@ -61,3 +61,8 @@ main{max-width:560px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 7
 .fl{position:absolute;bottom:-40px;color:var(--rose);opacity:0;animation:fl linear infinite}
 @keyframes fl{10%{opacity:.25}100%{transform:translateY(-110dvh) rotate(25deg);opacity:0}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.fl{display:none}.rise{opacity:1}}
+
+.stack{display:flex;flex-direction:column;gap:16px;animation:in .6s both}
+.gate{text-align:center;padding:28px 20px}
+.bigheart{min-width:130px;min-height:130px;background:none;border:0;color:var(--rose);font-size:110px;line-height:1;filter:drop-shadow(0 0 24px rgba(255,111,159,.6));animation:beat 1.6s ease-in-out infinite}
+.bigheart:active{transform:scale(.9)}

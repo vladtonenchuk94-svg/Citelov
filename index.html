@@ -25,6 +25,8 @@
 
   <section id="s-l1" class="screen">
     <p class="eyebrow">Рівень 1</p><h2>З чого все почалося</h2>
+    <div id="gate" class="glass gate"><button id="gateHeart" class="bigheart" type="button" aria-label="Торкнись серця, щоб відкрити історію">♥</button><p class="mut">Торкнись серця, щоб відкрити початок нашої історії</p></div>
+    <div id="l1content" class="stack" hidden>
     <div class="glass">
       <div id="timer" class="timer" aria-live="off"><div><b id="t-y">0</b><span>років</span></div><div><b id="t-d">0</b><span>днів</span></div><div><b id="t-h">0</b><span>годин</span></div><div><b id="t-m">0</b><span>хвилин</span></div></div>
       <p id="timerStub" class="mut" hidden>Дату знайомства ще не вказано. Додай її в config.js (metDate) — тут з’явиться лічильник.</p>
@@ -34,6 +36,7 @@
       <div class="row"><button id="prev" class="btn ghost" type="button" aria-label="Попереднє фото">‹</button><span id="slideNum" class="mut"></span><button id="next" class="btn ghost" type="button" aria-label="Наступне фото">›</button></div>
     </div>
     <button class="btn" type="button" data-go="l2" data-complete="l1">Далі</button>
+    </div>
   </section>
 
   <section id="s-l2" class="screen">

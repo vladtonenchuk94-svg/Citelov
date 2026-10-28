@@ -96,7 +96,15 @@ function drawSlide() {
   $('#slide').replaceChildren(photo(s.src, s.caption), h('span', 'cap', s.caption || 'Тут буде ваша фотографія'));
   $('#slideNum').textContent = (ci + 1) + ' / ' + slides.length;
 }
-function initL1() { slides = C.startPhotos && C.startPhotos.length ? C.startPhotos : [{}]; ci = 0; drawSlide(); renderTimer(); }
+function initL1() {
+  slides = C.startPhotos && C.startPhotos.length ? C.startPhotos : [{}]; ci = 0; drawSlide(); renderTimer();
+  const opened = st.done.includes('l1'); // якщо рівень уже пройдено — одразу показуємо вміст
+  $('#gate').hidden = opened; $('#l1content').hidden = !opened;
+}
+$('#gateHeart').onclick = () => {
+  burst($('#gateHeart'), 12); $('#gate').hidden = true; $('#l1content').hidden = false;
+  $('#l1content').scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
+};
 $('#prev').onclick = () => { ci = (ci - 1 + slides.length) % slides.length; drawSlide(); };
 $('#next').onclick = () => { ci = (ci + 1) % slides.length; drawSlide(); };
 
